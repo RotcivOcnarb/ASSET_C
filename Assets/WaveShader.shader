@@ -10,7 +10,7 @@
         Tags{"Queue" = "Transparent"}
         Pass
         {
-            ZTest Off
+            ZTest Always
             Blend SrcAlpha OneMinusSrcAlpha
             
             CGPROGRAM

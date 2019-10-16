@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1210452862449918598}
   - component: {fileID: 4885421795106547721}
   - component: {fileID: 6960417227922324275}
+  - component: {fileID: 8044759557759128160}
   m_Layer: 0
   m_Name: Letter
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8799963, b: 0.25943398, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -93,3 +94,18 @@ MonoBehaviour:
   line: 0
   pos: 0
   textStart: {x: 0, y: 0, z: 0}
+--- !u!114 &8044759557759128160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272877315711814989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1

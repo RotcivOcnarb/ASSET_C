@@ -23,7 +23,7 @@ public class FollowPlayer : MonoBehaviour
         Vector3 nextPos = 
             transform.position +
             (player.transform.position - transform.position)/10.0f;
-        nextPos.z = -10;
+        nextPos.z = -100;
         transform.position = nextPos;
     
         //Clampa baseado no Bounds
@@ -35,7 +35,7 @@ public class FollowPlayer : MonoBehaviour
             transform.position = new Vector3(
                 bounds.x + width/2f,
                 transform.position.y,
-                -10
+                -100
             );
         }
         //Clampa +X
@@ -43,7 +43,7 @@ public class FollowPlayer : MonoBehaviour
             transform.position = new Vector3(
                 bounds.x + bounds.size.x - width/2f,
                 transform.position.y,
-                -10
+                -100
             );
         }
         //Clampa -Y
@@ -51,7 +51,7 @@ public class FollowPlayer : MonoBehaviour
             transform.position = new Vector3(
                 transform.position.x,
                 bounds.y + height/2f,
-                -10
+                -100
             );
         }
         //Clampa +Y
@@ -59,7 +59,7 @@ public class FollowPlayer : MonoBehaviour
             transform.position = new Vector3(
                 transform.position.x,
                 bounds.y + bounds.size.y - height/2f,
-                -10
+                -100
             );
         }
 
