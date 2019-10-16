@@ -55,15 +55,19 @@ public class PlayerMovement : MonoBehaviour
 
         //Direcionamento do Sprite
 
+        
         if(hor < 0)
             spriteRenderer.flipX = false;
         else if(hor > 0)
             spriteRenderer.flipX = true;
         
+
         //Controle de Animação
+        
         animator.SetBool("Walking", hor !=  0);
         animator.SetBool("InAir", !hit);
 
+        
     }
 
     void OnDrawGizmosSelected(){
