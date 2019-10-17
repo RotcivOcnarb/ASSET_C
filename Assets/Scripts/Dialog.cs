@@ -24,6 +24,7 @@ public class Dialog : MonoBehaviour
     AudioSource sfx;
 
     bool canPass = false;
+    bool beginSpeak = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +34,20 @@ public class Dialog : MonoBehaviour
         sfx = GetComponent<AudioSource>();
     }
 
+    public void BeginSpeak(){
+        beginSpeak = true;
+    }
+
+    public void Deactivate(){
+        gameObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        if(beginSpeak)
+            timer += Time.deltaTime;
+        
         if(timer > delay){
             timer -= delay;
             if(wordIndex < words.Length){
@@ -77,7 +88,13 @@ public class Dialog : MonoBehaviour
                 NextDialog();
             }
             else{
-                gameObject.SetActive(false);
+                GetComponent<Animator>().SetBool("Open", false);
+
+                foreach(GameObject go in letters){
+                    go.GetComponent<Animator>().SetTrigger("Destroy");
+                }
+                letters.Clear();
+
                 GlobalVars.inputBlocked = false;
             }
         }
@@ -89,13 +106,16 @@ public class Dialog : MonoBehaviour
         canPass = false;
         dialogIndex = -1;
         gameObject.SetActive(true);
+        GetComponent<Animator>().SetBool("Open", true);
         NextDialog();
     }
 
     void NextDialog(){
         foreach(GameObject go in letters){
-            Destroy(go);
+            go.GetComponent<Animator>().SetTrigger("Destroy");
         }
+        letters.Clear();
+
         textIndex = 0;
         wordIndex = 0;
         dialogIndex ++;

@@ -48,10 +48,7 @@ public class PlayerMovement : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.W) && hit){
                 body.velocity = new Vector2(body.velocity.x, jumpStrength);
             }
-        }
-        else{
-            body.velocity = new Vector2(0, 0);
-        }
+        
 
         //Direcionamento do Sprite
 
@@ -67,7 +64,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Walking", hor !=  0);
         animator.SetBool("InAir", !hit);
 
-        
+        }
+        else{
+            body.velocity = new Vector2(0, 0);
+        }
     }
 
     void OnDrawGizmosSelected(){

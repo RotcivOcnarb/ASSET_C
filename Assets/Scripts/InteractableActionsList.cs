@@ -17,6 +17,11 @@ public class InteractableActionsList : MonoBehaviour
         
     }
 
+    public void EnterScene(int scene){
+        ScenePositionManager.setLastPosition(SceneManager.GetActiveScene().buildIndex , GameObject.Find("Player").transform.position);
+        SceneManager.LoadScene(scene);
+    }
+
     public void EnterYerYouti(){
         ScenePositionManager.setLastPosition(0, GameObject.Find("Player").transform.position);
         SceneManager.LoadScene(1);
