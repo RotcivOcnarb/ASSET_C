@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/YerYouti.unity
+- path: Assets/Scenes/Cymena.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

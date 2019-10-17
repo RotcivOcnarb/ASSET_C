@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YerYouti.unity
     guid: 61828518308d2ad43943deaefdca0877
+  - enabled: 1
+    path: Assets/Scenes/Lurker Battle.unity
+    guid: d283c54064f9ceb4dbb34b87b96b1e42
   m_configObjects: {}

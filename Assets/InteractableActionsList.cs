@@ -26,4 +26,9 @@ public class InteractableActionsList : MonoBehaviour
         ScenePositionManager.setLastPosition(1, GameObject.Find("Player").transform.position);
         SceneManager.LoadScene(0);
     }
+
+    public void EnterBattle(){
+        ScenePositionManager.setLastPosition(1, GameObject.Find("Player").transform.position);
+        SceneManager.LoadScene(2);
+    }
 }
